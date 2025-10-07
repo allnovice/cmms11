@@ -1,3 +1,5 @@
+[![Vercel](https://vercel.com/erics-projects-e2278df9/cmms11/badge)](https://vercel.com/erics-projects-e2278df9/cmms11/deployments)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
