@@ -1,4 +1,4 @@
-[![Vercel](https://vercel.com/api/v1/badges/cmms11/deploy-status)](https://vercel.com/erics-projects-e2278df9/cmms11/deployments)
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/cmms11?style=for-the-badge)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
