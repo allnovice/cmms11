@@ -35,6 +35,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-scrpt
+scrpt scrpt
 
 cd ~/cmms11/scrpt && npm init -y && npm install firebase-admin csv-parser nodemailer && echo 'export GMAIL_USER="your_email@gmail.com"' >> ~/.bashrc && echo 'export GMAIL_APP_PASS="your_app_password"' >> ~/.bashrc && source ~/.bashrc && node seedAssets.js
