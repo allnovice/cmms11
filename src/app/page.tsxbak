@@ -1,0 +1,39 @@
+"use client";
+
+import { useSession, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { FiLogOut } from "react-icons/fi";
+
+export default function HomePage() {
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      router.push("/login");
+    }
+  }, [status]);
+
+  if (status === "loading") return <p>Loading...</p>;
+  if (!session) return null;
+
+  return (
+    <div className="dashboard-container">
+      <header className="dashboard-header">
+        <h1 className="welcome-text">Welcome, {session.user?.name}</h1>
+
+        <button
+          className="logout-icon"
+          onClick={() => signOut({ callbackUrl: "/login" })}
+        >
+          <FiLogOut size={20} />
+        </button>
+      </header>
+
+      <main className="dashboard-main">
+        <p>Dashboard content goes here.</p>
+      </main>
+    </div>
+  );
+}

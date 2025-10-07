@@ -1,0 +1,167 @@
+/* Base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header card */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Main dashboard content card */
+.dashboard-main {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+/*  flex-direction: column; /* stack table + chatbox vertically */
+/*  min-height: 400px;      /* ensures there's space */
+}
+
+/* Circular logout button */
+.logout-icon {
+  background-color: #d9534f;
+  border: none;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Top nav items horizontal */
+.nav-items {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Uniform nav buttons */
+.nav-btn {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+
+  .dashboard-header, .dashboard-main {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+  }
+
+  .logout-icon {
+    background-color: #ff6b6b;
+  }
+
+  .nav-btn {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .logout-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Users table container (matches dashboard card style) */
+.users-table-container {
+  overflow-x: auto; /* horizontal scroll if needed */
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Users table (full width, spaced nicely) */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.users-table th,
+.users-table td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Header styling aligns with dashboard main card */
+.users-table th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+}
+
+/* Hover effect */
+.users-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  .users-table-container {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+  }
+
+  .users-table th {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+  }
+
+  .users-table td {
+    color: #f0f0f0;
+    border-bottom: 1px solid #333;
+  }
+
+  .users-table tr:hover {
+    background-color: #2d2d2d;
+  }
+}
+
