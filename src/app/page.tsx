@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "@/firebase";
-import { FiHome, FiUsers, FiBox, FiSettings, FiLogOut } from "react-icons/fi";
+import { FiHome, FiUsers, FiBox, FiClipboard, FiSettings, FiLogOut } from "react-icons/fi";
 
 export default function HomePage() {
   const router = useRouter();
@@ -35,6 +35,7 @@ export default function HomePage() {
     { icon: <FiHome size={24} />, path: "/" },
     { icon: <FiUsers size={24} />, path: "/users" },
     { icon: <FiBox size={24} />, path: "/assets" },
+    { icon: <FiClipboard size={24} />, path: "/requests" }, // <-- added
     { icon: <FiSettings size={24} />, path: "/settings" },
     { icon: <FiLogOut size={24} />, action: handleLogout },
   ];

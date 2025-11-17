@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth, db } from "@/firebase";
 import { collection, getDocs } from "firebase/firestore";
-import { FiHome, FiUsers, FiBox, FiSettings, FiLogOut } from "react-icons/fi";
+import { FiHome, FiUsers, FiBox, FiClipboard,  FiSettings, FiLogOut } from "react-icons/fi";
 
 export default function AssetsPage() {
   const router = useRouter();
@@ -54,6 +54,7 @@ export default function AssetsPage() {
     { icon: <FiHome size={24} />, path: "/" },
     { icon: <FiUsers size={24} />, path: "/users" },
     { icon: <FiBox size={24} />, path: "/assets" },
+    { icon: <FiClipboard size={24} />, path: "/requests" },
     { icon: <FiSettings size={24} />, path: "/settings" },
     { icon: <FiLogOut size={24} />, action: handleLogout },
   ];

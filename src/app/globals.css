@@ -165,3 +165,121 @@ body, html {
   }
 }
 
+/* Requests page header */
+.requests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Add Request icon button */
+.add-request-btn {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.add-request-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Dark mode for Add Request button */
+@media (prefers-color-scheme: dark) {
+  .add-request-btn {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+
+  .add-request-btn:hover {
+    background-color: #333;
+  }
+}
+
+/* Modal backdrop covers the whole screen */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* semi-transparent dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* on top of everything */
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  min-width: 300px;
+  max-width: 90%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Modal buttons for request types */
+.request-type-grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.request-type-btn {
+  flex: 1 1 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.request-type-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Close button */
+.modal-close-btn {
+  margin-top: 20px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+/* Dark mode for modal */
+@media (prefers-color-scheme: dark) {
+  .modal-content {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  .request-type-btn {
+    background-color: #333;
+    color: #fff;
+  }
+  .request-type-btn:hover {
+    background-color: #444;
+  }
+  .modal-close-btn {
+    background-color: #ff6b6b;
+    color: #fff;
+  }
+}
