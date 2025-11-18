@@ -1,4 +1,0 @@
-release-type: node
-package-name: cmms12
-bump-minor-pre-major: true
-default-release-branch: changelog

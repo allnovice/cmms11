@@ -3,7 +3,7 @@ name: "Release Please"
 on:
   push:
     branches:
-      - main
+      - main  # triggers workflow on pushes to main
 
 jobs:
   release:
@@ -20,6 +20,4 @@ jobs:
       - name: Release Please
         uses: google-github-actions/release-please-action@v3
         with:
-          release-type: node
-          package-name: cmms11
           token: ${{ secrets.GITHUB_TOKEN }}
