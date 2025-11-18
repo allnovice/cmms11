@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/allnovice/cmms11/compare/v1.1.0...v1.2.0) (2025-11-18)
+
+
+### Features
+
+* edit rm3 ([6dae308](https://github.com/allnovice/cmms11/commit/6dae308234bf2ca213c4860f0e2f6038999f9d77))
+
 # [1.1.0](https://github.com/allnovice/cmms11/compare/v1.0.0...v1.1.0) (2025-11-18)
 
 
