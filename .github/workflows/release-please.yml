@@ -22,4 +22,5 @@ jobs:
         with:
           release-type: node
           package-name: cmms11
+          default-release-branch: changelog
           token: ${{ secrets.GITHUB_TOKEN }}
