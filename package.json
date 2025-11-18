@@ -68,7 +68,7 @@
             "package-lock.json",
             "CHANGELOG.md"
           ],
-          "message": "chore nnmn(release): ${nextRelease.version} [skip ci]",
+          "message": "chore(releaseeeee): ${nextRelease.version} [skip ci]",
           "author": {
             "name": "bot_AKO",
             "email": "bot_male@yehoo.com"
