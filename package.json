@@ -1,6 +1,6 @@
 {
   "name": "cmms11",
-  "version": "1.2.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -41,26 +41,41 @@
     "tailwindcss": "^4.1.14",
     "typescript": "^5"
   },
- "release": {
-  "branches": ["main"],
-  "plugins": [
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
-    ["@semantic-release/changelog", {
-      "changelogFile": "CHANGELOG.md"
-    }],
-    ["@semantic-release/npm", {
-      "npmPublish": false
-    }],
-    ["@semantic-release/git", {
-      "assets": ["package.json", "package-lock.json", "CHANGELOG.md"],
-      "message": "chore nnmn(release): ${nextRelease.version} [skip ci]",
-      "author": {
-        "name": "bot_AKO",
-        "email": "bot_male@yehoo.com"
-      }
-    }],
-    "@semantic-release/github"
-  ]
- }
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "package-lock.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore nnmn(release): ${nextRelease.version} [skip ci]",
+          "author": {
+            "name": "bot_AKO",
+            "email": "bot_male@yehoo.com"
+          }
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  }
 }
