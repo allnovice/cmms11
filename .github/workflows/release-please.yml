@@ -3,7 +3,7 @@ name: "Release Please"
 on:
   push:
     branches:
-      - main  # triggers workflow on pushes to main
+      - main  # workflow triggers on pushes to main
 
 jobs:
   release:
@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          ref: main  # make sure we start from main
 
       - name: Setup Node
         uses: actions/setup-node@v3
@@ -20,7 +22,7 @@ jobs:
       - name: Release Please
         uses: google-github-actions/release-please-action@v3
         with:
-          release-type: node
-          package-name: cmms11
-          default-release-branch: changelog
           token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node
+          package-name: cmms12
+          release-branch: changelog  # <- force changelog branch
